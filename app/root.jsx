@@ -16,6 +16,8 @@ import appStyles from '~/styles/app.css?url';
 import {PageLayout} from '~/components/PageLayout';
 import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
 
+import stylesheet from '~/tailwind.css?url';
+
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  * @type {ShouldRevalidateFunction}
@@ -37,6 +39,7 @@ export const shouldRevalidate = ({
 
 export function links() {
   return [
+    {rel: 'stylesheet', href: stylesheet},
     {rel: 'stylesheet', href: resetStyles},
     {rel: 'stylesheet', href: appStyles},
     {
