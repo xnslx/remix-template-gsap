@@ -1,9 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  overflow-y: hidden;
+  display: none; /* WebKit browsers */
+}
+
 :root {
   --aside-width: 400px;
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 64px;
+  --header-height: 40px;
   --color-dark: #000;
   --color-light: #fff;
 }
@@ -364,6 +373,14 @@ button.reset:hover:not(:has(> *)) {
 
 .recommended-product img {
   height: auto;
+}
+
+.hero-products-container {
+  @apply w-screen h-full flex justify-center items-center;
+}
+
+.hero-products-inner-container {
+  @apply h-screen w-full gap-x-4;
 }
 
 /*
